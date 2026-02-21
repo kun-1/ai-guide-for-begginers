@@ -1,0 +1,92 @@
+site_name: AI理论和实践自学指南
+site_description: 针对零基础读者的AI入门教材：从理解LLM到实践Claude Code和OpenClaw
+site_author: maxwell
+site_url: https://kun-1.github.io/ai-guide-for-begginers/
+repo_url: https://github.com/kun-1/ai-guide-for-begginers
+repo_name: kun-1/ai-guide-for-begginers
+
+theme:
+  name: material
+  palette:
+    - scheme: default
+      primary: custom
+      accent: custom
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
+    - scheme: slate
+      primary: custom
+      accent: custom
+      toggle:
+        icon: material/brightness-4
+        name: Switch to light mode
+  font:
+    text: Roboto
+    code: Roboto Mono
+  features:
+    - navigation.instant
+    - navigation.instant.progress
+    - navigation.tracking
+    - navigation.expand
+    - navigation.path
+    - navigation.prune
+    - navigation.indexes
+    - navigation.top
+    - navigation.footer
+    - toc.follow
+    - content.code.copy
+    - content.action.edit
+    - search.suggest
+    - search.highlight
+  language: zh
+
+extra:
+  schema: https://dmccreary.github.io/intelligent-textbooks/ns/textbook/v1
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/kun-1/ai-guide-for-begginers
+
+markdown_extensions:
+  - admonition
+  - pymdownx.details
+  - pymdownx.superfences
+  - pymdownx.highlight:
+      anchor_linenums: true
+      line_spans: __span
+      pygments_lang_class: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - pymdownx.tabbed:
+      alternate_style: true
+  - pymdownx.tasklist:
+      custom_checkbox: true
+  - attr_list
+  - md_in_html
+  - abbr
+  - tables
+  - footnotes
+  - toc:
+      permalink: true
+
+plugins:
+  - search:
+      lang:
+        - zh
+        - en
+
+nav:
+  - 首页: index.md
+  - 关于本书: about.md
+  - 课程介绍: course-description.md
+  - 学习图谱:
+    - 学习图谱概览: learning-graph/index.md
+  - 章节内容:
+    - 章节导航: chapters/index.md
+    - 第1章 认识人工智能: chapters/01-what-is-ai/index.md
+    - 第2章 与AI对话的艺术: chapters/02-prompt-engineering/index.md
+  - 词汇表: glossary.md
+  - 常见问题: faq.md
+  - 联系方式: contact.md
+
+extra_css:
+  - css/extra.css

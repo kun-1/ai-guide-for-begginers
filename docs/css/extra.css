@@ -1,0 +1,88 @@
+/* Custom CSS for AI Guide */
+
+/* Primary brand color - warm orange */
+:root {
+  --md-primary-fg-color: #DA7857;
+  --md-primary-fg-color--light: #E89B7A;
+  --md-primary-fg-color--dark: #B85F3F;
+  --md-accent-fg-color: #DA7857;
+  --md-accent-fg-color--transparent: rgba(218, 120, 87, 0.1);
+}
+
+/* Custom admonitions */
+.md-typeset .admonition.tip,
+.md-typeset details.tip {
+  border-color: #DA7857;
+}
+
+.md-typeset .tip > .admonition-title,
+.md-typeset .tip > summary {
+  background-color: rgba(218, 120, 87, 0.1);
+}
+
+.md-typeset .tip > .admonition-title::before,
+.md-typeset .tip > summary::before {
+  background-color: #DA7857;
+  -webkit-mask-image: var(--md-admonition-icon--tip);
+          mask-image: var(--md-admonition-icon--tip);
+}
+
+/* Hero section styling */
+.hero {
+  text-align: center;
+  padding: 2rem 0;
+}
+
+.hero h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  color: var(--md-primary-fg-color);
+}
+
+.hero p {
+  font-size: 1.2rem;
+  color: var(--md-typeset-color);
+  max-width: 600px;
+  margin: 0 auto 2rem;
+}
+
+/* Feature cards */
+.feature-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+  margin: 2rem 0;
+}
+
+.feature-card {
+  padding: 1.5rem;
+  border-radius: 8px;
+  background: var(--md-accent-fg-color--transparent);
+  border: 1px solid var(--md-accent-fg-color);
+}
+
+.feature-card h3 {
+  margin-top: 0;
+  color: var(--md-primary-fg-color);
+}
+
+/* Chapter phase badges */
+.phase-badge {
+  display: inline-block;
+  padding: 0.25rem 0.75rem;
+  border-radius: 12px;
+  font-size: 0.75rem;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.phase-1 { background: #E3F2FD; color: #1565C0; }
+.phase-2 { background: #F3E5F5; color: #7B1FA2; }
+.phase-3 { background: #E8F5E9; color: #2E7D32; }
+
+/* Responsive adjustments */
+@media screen and (max-width: 76.1875em) {
+  .hero h1 {
+    font-size: 2rem;
+  }
+}
